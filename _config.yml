@@ -1,0 +1,15 @@
+title: Muhammad Haris Rais # your name (or website title) here
+logo: "january_2020_portraits-9_49449802698_o.jpg?raw=true" # your photo (or logo) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  <br>
+  PhD Scholar
+  <br>
+  <a href="https://safe.lab.vcu.edu/people/">Security and Forensics Investigation (SAFE) Lab</a>
+  <br>
+  <a href="https://egr.vcu.edu/departments/computer/">Virginia Commonwealth University (VCU), USA </a>
+  <br>
+  <a href="https://www.linkedin.com/in/haris-rais/">View My LinkedIn Profile</a> 
+  <br>
+  Complete Resume <a href="https://raw.githubusercontent.com/vishaalmehta1/Muhammad-Haris-Rais-Resume/Markdown/CV%20-%20Haris%20Rais-Mar%202022.pdf">here </a>
+  
+theme: jekyll-theme-minimal
