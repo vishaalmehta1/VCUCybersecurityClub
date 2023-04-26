@@ -50,166 +50,6 @@ body {
 
 
 /*---------------------------------------
-  TYPOGRAPHY               
------------------------------------------*/
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--dark-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--font-weight-bold);
-}
-
-h1 {
-  font-size: var(--h1-font-size);
-}
-
-h2 {
-  font-size: var(--h2-font-size);
-}
-
-h3 {
-  font-size: var(--h3-font-size);
-}
-
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
-h6 {
-  font-size: var(--h6-font-size);
-}
-
-p {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
-}
-
-ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
-}
-
-a, 
-button {
-  touch-action: manipulation;
-  transition: all 0.3s;
-}
-
-a {
-  display: inline-block;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-b,
-strong {
-  font-weight: var(--font-weight-bold);
-}
-
-.link-fx-1 {
-  color: var(--white-color);
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  height: 32px;
-  padding: 0 6px;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.link-fx-1:hover {
-  color: var(--link-hover-color);
-}
-
-.link-fx-1:hover::before {
-  transform: translateX(17px) scaleX(0);
-  transition: transform .2s;
-}
-
-.link-fx-1:hover .icon circle {
-  stroke-dashoffset: 200;
-  transition: stroke-dashoffset .2s .1s;
-}
-
-.link-fx-1:hover .icon line {
-  transform: rotate(-180deg);
-}
-
-.link-fx-1:hover .icon line:last-child {
-  transform: rotate(180deg);
-}
-
-.link-fx-1::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: currentColor;
-  transform-origin: right center;
-  transition: transform .2s .1s;
-}
-
-.link-fx-1 .icon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translateX(100%) rotate(90deg);
-  font-size: 32px;
-}
-
-.icon {
-  --size: 1em;
-  height: var(--size);
-  width: var(--size);
-  display: inline-block;
-  color: inherit;
-  fill: currentColor;
-  line-height: 1;
-  flex-shrink: 0;
-  max-width: initial;
-}
-
-.link-fx-1 .icon circle {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  transition: stroke-dashoffset .2s;
-}
-
-.link-fx-1 .icon line {
-  transition: transform .4s;
-  transform-origin: 13px 15px;
-}
-
-.link-fx-1 .icon line:last-child {
-  transform-origin: 19px 15px;
-}
-
-
-/*---------------------------------------
   SECTION               
 -----------------------------------------*/
 .section-padding {
@@ -219,21 +59,6 @@ strong {
 
 .section-bg {
   background-color: var(--section-bg-color);
-}
-
-.section-overlay {
-  background-color: var(--dark-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  opacity: 0.35;
-}
-
-.section-overlay + .container {
-  position: relative;
 }
 
 .tab-content {
@@ -280,54 +105,6 @@ strong {
   color: var(--primary-color);
 }
 
-
-/*---------------------------------------
-  CUSTOM ICON COLOR               
------------------------------------------*/
-.custom-icon {
-  color: var(--secondary-color);
-}
-
-
-/*---------------------------------------
-  CUSTOM BUTTON               
------------------------------------------*/
-.custom-btn {
-  background: var(--custom-btn-bg-color);
-  border: 2px solid transparent;
-  border-radius: var(--border-radius-large);
-  color: var(--white-color);
-  font-size: var(--btn-font-size);
-  font-weight: var(--font-weight-bold);
-  line-height: normal;
-  transition: all 0.3s;
-  padding: 10px 20px;
-}
-
-.custom-btn:hover {
-  background: var(--custom-btn-bg-hover-color);
-  color: var(--white-color);
-}
-
-.custom-border-btn {
-  background: transparent;
-  border: 2px solid var(--custom-btn-bg-color);
-  color: var(--custom-btn-bg-color);
-}
-
-.navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover,
-.custom-border-btn:hover {
-  background: var(--custom-btn-bg-hover-color);
-  border-color: transparent;
-  color: var(--white-color);
-}
-
-.custom-btn-bg-white {
-  border-color: var(--white-color);
-  color: var(--white-color);
-}
-
-
 /*---------------------------------------
   VIDEO              
 -----------------------------------------*/
@@ -339,9 +116,10 @@ strong {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
   height: 100%;
+  
 }
 
 
@@ -350,8 +128,8 @@ strong {
 -----------------------------------------*/
 .site-header {
   background-color: var(--primary-color);
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -360,19 +138,16 @@ strong {
 -----------------------------------------*/
 .sticky-wrapper {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-top: 51px;
-}
-
-.sticky-wrapper.is-sticky .navbar {
-  background-color: var(--dark-color);
+  width: 100;
+  float: left;
+  margin: 0;
+  padding: 0;
+  
 }
 
 .navbar {
   background: transparent;
-  z-index: 9;
+  z-index: 3;
 }
 
 .navbar-brand,
@@ -506,7 +281,7 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../images/edward-unsplash-blur.jpg');
+  background-image: url('../images/aboutUs.png');
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
@@ -546,98 +321,6 @@ strong {
   padding: 35px;
 }
 
-
-/*---------------------------------------
-  TICKET               
------------------------------------------*/
-.ticket-section {
-  background-image: url('../images/nicholas-green-unsplash-blur.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 130px;
-}
-
-.ticket-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  padding: 50px;
-}
-
-.ticket-form .form-check {
-  position: relative;
-  min-height: 52px;
-  padding-left: 35px;
-}
-
-.ticket-form .form-check .form-check-label {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 12px;
-  margin-left: 35px;
-  width: 100%;
-  height: 100%;
-}
-
-
-/*---------------------------------------
-  ARTISTS              
------------------------------------------*/
-.artists-thumb {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.artists-image {
-  border-radius: var(--border-radius-medium);
-  display: block;
-  width: 100%;
-}
-
-.artists-thumb:hover .artists-hover {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.artists-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
-  border-radius: var(--border-radius-medium);
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  margin: 20px;
-  padding: 35px;
-  transition: all 0.5s ease;
-  transform: translateY(100%);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.artists-hover p strong {
-  color: var(--white-color);
-  display: inline-block;
-  min-width: 180px;
-  margin-right: 20px;
-}
-
-.artists-hover p a {
-  color: var(--secondary-color);
-}
-
-.artists-hover p a:hover {
-  color: var(--white-color);
-}
-
-.artists-hover hr {
-  margin: 1.5rem 0;
-}
 
 
 /*---------------------------------------
@@ -718,65 +401,6 @@ strong {
   color: var(--white-color);
   position: relative;
   z-index: 2;
-}
-
-
-/*---------------------------------------
-  PRICING              
------------------------------------------*/
-.pricing-thumb {
-  border: 5px dotted var(--dark-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  padding: 50px;
-}
-
-.pricing-thumb h3 small {
-  display: inline-block;
-  font-size: var(--p-font-size);
-  margin-right: 15px;
-}
-
-.pricing-list {
-  column-count: 2;
-  padding-left: 20px;
-}
-
-.pricing-list-item {
-  line-height: normal;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
-.pricing-tag {
-  background-color: var(--secondary-color);
-  border-radius: var(--border-radius-large);
-  color: var(--white-color);
-  font-weight: var(--font-weight-bold);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 20px;
-}
-
-.pricing-tag span {
-  font-size: 180%;
-  line-height: normal;
-}
-
-.pricing-thumb .link-fx-1 {
-  color: var(--primary-color);
-}
-
-.pricing-thumb .link-fx-1:hover {
-  color: var(--link-hover-color);
 }
 
 
